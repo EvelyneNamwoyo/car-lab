@@ -6,14 +6,14 @@ class Car(object):
         self.speed = 0
 
         if self.name == 'Porshe' or self.name == 'Koenigsegg':
-            self.num_of_doors = 2
+            self.no_doors = 2
         else:
-            self.num_of_doors = 4
+            self.no_doors = 4
 
         if self.type != 'trailer':
-            self.num_of_wheels = 4
+            self.no_wheels = 4
         else:
-            self.num_of_wheels = 8
+            self.no_wheels = 8
 
     def is_saloon(self):
         if self.type != 'trailer':
@@ -21,13 +21,9 @@ class Car(object):
         else:
             return False
 
-    def drive(self, num):
-        """drive car by altering speed
-
-        this method as returns the updated car object.
-        """
+    def drive(self, spe):
         if self.type == 'Car':
-            self.speed = 10 ** num
+            self.speed = 10 ** spe
         else:
             self.speed = 77
 
